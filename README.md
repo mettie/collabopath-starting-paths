@@ -60,3 +60,76 @@ image: 'sample.jpg',
 q: 'check out one of the other pamphlets',
 q: 'go upstairs',
 ```
+
+
+# making the path objects:
+
+So you can just follow the template, and keep appending new paths onto it as you see fit. The important things are that the key should always be a string, and that it needs to have 2 properties: choiceL, and choiceR. each of the choices needs to have an image, a text, an effect, and a q property. You don't need to worry about the image properties, you can just leave them as an empty string. The text, and the q properties are really where the story is, so that is what you'll mainly be modifying.
+
+Additionally, you can make effects if you'd like. Here is a list of all basic effects:
+
+- 'NONE'
+- 'GOLD',
+- 'HEALTH_U'
+- 'HEALTH_D'
+- 'INTELLIGENCE_U'
+- 'INTELLIGENCE_D'
+- 'SANITY_U'
+- 'SANITY_D'
+- 'STAMINA_U'
+- 'STAMINA_D'
+- 'MERCHANT'
+- 'FOUND_ITEM'
+
+additionally there can be conditional effects. there are only two types: HAS, and CHECK
+
+a CHECK effect is formatted as follows:
+
+check(<STAT ATTRIBUTE>)<PICK ONE OF THE ABOVE EFFECTS>:<PICK ONE OF THE ABOVE EFFECTS>
+
+Where the <STAT ATTRIBUTE> can be any of the following:
+
+- HEALTH
+- STAMINA
+- SANITY
+- INTELLIGENCE
+
+here is an example:
+```
+check(HEALTH)FOUND_ITEM:NONE
+```
+
+and a HAS effect is formatted as follows:
+
+has(<ITEM>)<PICK ONE OF THE ABOVE EFFECTS>:<PICK ONE OF THE ABOVE EFFECTS>
+
+where <ITEM> can be any of the following:
+
+-  'FLASHLIGHT',
+-  'NICE_SWEATER',
+-  'PEPE_MEME',
+-  'GASOLINE',
+-  'RED_KEY',
+-  'GREEN_KEY',
+-  'BLUE_KEY',
+-  'TOOLBOX',
+-  'MAP',
+-  'TRACK_SUIT',
+-  'UMBRELLA',
+-  'FOOD',
+-  'WATER',
+-  'BOOK',
+-  'KNIFE',
+-  'SLINGSHOT',
+-  'LIGHTER',
+-  'TREBUCHET',
+
+here is an example:
+```
+has(TREBUCHET)NONE:HEALTH_D
+```
+
+If you want, you can add effects as you see fit to the story, otherwise I can add them in later.
+
+
+Lastly, please leave the effects as NONE for the objects where I have left a comment: // keep this one as it is

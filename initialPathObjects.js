@@ -20,13 +20,13 @@ module.exports.pathObjects = {
       text: 'You try to crawl through the broken window. But alas, you slipped and cut yourself while halfway through the window. You managed to get inside, although youre a bit scratched up. Inside you seem to be in some sort of closet. Its really dark, but thanks to some light coming in through the window you spot a door handle, and a light switch.',
       image: 'sample.jpg',
       q: 'Attempt to crawl through broken window',
-      effect: 'HEALTH_D',
+      effect: 'NONE', // keep this one as is
     },
     choiceR: {
       text: 'You walk around to the back of the hotel. Here you see an entry to some kind of cellar. Beside the cellar is what appears to be a homeless man wearing a trench coat, and vigorously polishing something. He hears you approach and turns around. He starts to open his trench coat in front of you as you begin to panic about what might be underneath. But when he opened it, he revealed a small collection of interesting goodies...',
       image: 'sample.jpg',
       q: 'Go around to the back of the hotel',
-      effect: 'MERCHANT',
+      effect: 'NONE', // keep this one as is
     },
   },
   '10': {
@@ -76,13 +76,13 @@ module.exports.pathObjects = {
       text: 'You start walking upstairs, and notice the stairs are creaking very loudly. You wonder if you should continue...',
       image: 'sample.jpg',
       q: 'go upstairs',
-      effect: 'NONE',
+      effect: 'NONE', // keep this one as is
     },
     choiceR: {
       text: 'You pick up one of the pamphlets. it reads: ATTENTION ALL HOTEL EMPLOYEES, CLIENTS, AND MAINTENANCE WORKERS! THE MANAGEMENT HAS DISCOVERED A CONTAMINATION. PLEASE EVACUATE IMMEDIATELY! You put the pamphlet down, and shudder.',
       image: 'sample.jpg',
       q: 'read one of the pamphlets',
-      effect: 'SANITY_D',
+      effect: 'NONE', // keep this one as is
     },
   },
   '01': {
